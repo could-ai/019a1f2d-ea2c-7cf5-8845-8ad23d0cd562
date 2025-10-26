@@ -4,6 +4,7 @@ class JobPost {
   final String location;
   final String description;
   final String url;
+  final String logoUrl;
 
   JobPost({
     required this.title,
@@ -11,5 +12,6 @@ class JobPost {
     required this.location,
     required this.description,
     required this.url,
+    required this.logoUrl,
   });
 }

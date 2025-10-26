@@ -18,6 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
       location: 'Mountain View, CA',
       description: 'We are looking for a skilled Flutter developer to join our team. The ideal candidate will have experience in building high-quality mobile applications for both Android and iOS. Responsibilities include collaborating with cross-functional teams to define, design, and ship new features.',
       url: 'https://infromoza.com/job/flutter-developer-google/',
+      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg',
     ),
     JobPost(
       title: 'Backend Engineer (Node.js)',
@@ -25,6 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
       location: 'Menlo Park, CA',
       description: 'Join our backend team to build scalable and robust services. You will be working with Node.js, GraphQL, and various databases to power our applications. Experience with microservices architecture is a plus.',
       url: 'https://infromoza.com/job/backend-engineer-facebook/',
+      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Meta-Logo.png',
     ),
     JobPost(
       title: 'UI/UX Designer',
@@ -32,6 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
       location: 'Cupertino, CA',
       description: 'We are seeking a talented UI/UX designer to create amazing user experiences. The ideal candidate should have an eye for clean and artful design, possess superior UI skills and be able to translate high-level requirements into interaction flows and artifacts, and transform them into beautiful, intuitive, and functional user interfaces.',
       url: 'https://infromoza.com/job/ui-ux-designer-apple/',
+      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg',
     ),
      JobPost(
       title: 'Data Scientist',
@@ -39,6 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
       location: 'Los Gatos, CA',
       description: 'As a Data Scientist, you will be responsible for analyzing large datasets to derive actionable insights. You will work on various projects, including recommendation systems, user behavior analysis, and A/B testing. Strong background in statistics and machine learning is required.',
       url: 'https://infromoza.com/job/data-scientist-netflix/',
+      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg',
     ),
   ];
 
@@ -56,6 +60,10 @@ class _HomeScreenState extends State<HomeScreen> {
           return Card(
             margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             child: ListTile(
+              leading: CircleAvatar(
+                backgroundImage: NetworkImage(job.logoUrl),
+                backgroundColor: Colors.transparent,
+              ),
               title: Text(job.title, style: const TextStyle(fontWeight: FontWeight.bold)),
               subtitle: Text('${job.company} - ${job.location}'),
               trailing: const Icon(Icons.chevron_right),

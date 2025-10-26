@@ -18,6 +18,14 @@ class JobDetailScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Center(
+                child: CircleAvatar(
+                  backgroundImage: NetworkImage(jobPost.logoUrl),
+                  radius: 40,
+                  backgroundColor: Colors.transparent,
+                ),
+              ),
+              const SizedBox(height: 16),
               Text(
                 jobPost.title,
                 style: Theme.of(context).textTheme.headlineSmall,
